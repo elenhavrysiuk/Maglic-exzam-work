@@ -1,2 +1,2 @@
 # Maglic-exzam-work
-Examination  work in Beetroot Akademy
+Examination  work in Beetroot Academy
