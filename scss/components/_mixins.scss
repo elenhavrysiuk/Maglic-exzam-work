@@ -1,0 +1,60 @@
+@mixin position {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+@mixin posCenter {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%)
+	
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+} 
+
+@mixin backGround {
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	 
+}
+// for hover and focus
+
+@mixin tr($prop) {
+	transition: $prop .4s ease-in;
+}
+
+@mixin hover() {
+	@include tr(all);
+	&:hover,
+	&:focus,
+	&:active,
+	&--active {
+		@content;
+	}
+}
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  @mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+
+
+  @mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}

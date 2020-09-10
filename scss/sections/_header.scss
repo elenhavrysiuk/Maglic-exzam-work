@@ -1,0 +1,128 @@
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 15px 5px;
+
+  @include laptop {
+   padding: 0 5px;
+  }
+}
+
+.header {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 375px;
+  padding: 10px 10px;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;  
+
+   @include laptop {
+  padding: 45px 25px 10px;
+  }
+   @include laptop-pro {
+   padding: 100px 10px;
+  }
+
+
+&__logo {
+  float: left;
+  width: 20%;
+  text-align: left;
+}
+}
+.logo__img {
+
+  @include laptop {
+  width: 101px;  
+  height: 75px;
+  }
+} 
+
+.main-nav {
+  width: 80%;
+  float: right;
+  text-align: right;
+  font-family: Lato;
+
+
+&__item {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  margin-right: 33px;
+}
+&__item:nth-child(4) {
+  margin-right: 26px;
+}
+&__item:nth-child(8) {
+  margin-right: 7px;
+}
+
+&:last-child {
+  margin-right: 0;
+}
+
+&__items {
+  margin-top: 20px;
+  display: none;
+
+  @include laptop-pro {
+   display: block;
+  } 
+}
+
+.active {
+  display: block;  
+}
+
+&__link {
+  font-size: 18px;
+  line-height: 1.30;
+  color: #fffefe;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: right;
+  position: relative;
+  transition: color 0.3s;
+}
+
+&__link::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: $color-gold;
+  content: '';
+  opacity: 0;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  transform: translateY(-10px);
+}
+
+&__link:hover,
+&__link:focus {
+  color: $color-gold;     
+}
+
+&__link:hover::after,
+&__link:focus::after {
+  height: 4px;
+  opacity: 1;
+  transform: translateY(10px);
+}   
+} 
+
+
+
+
+
+
+
+
+
+

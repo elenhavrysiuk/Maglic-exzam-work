@@ -1,0 +1,58 @@
+.hammer-emblem {
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+.hammer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 341px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  &__line {
+    flex: 0 0 81px;
+    width: 40px;
+    height: 1px;
+    background: #d0d0d0;
+  }
+
+  &__icon {
+    margin: 0 15px;
+  }
+}
+
+.template-hummer {
+  display: inline-block;
+  margin-top: 18px;
+  margin-left: -10px;
+}
+.blog-hummer {
+  margin-left: 0;
+}
+.form-hummer {
+  margin-left: 0;
+}
+
+//  triangle
+
+.triangle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 341px;
+  margin: 2px auto;
+  overflow: hidden;
+
+  &-line {
+    flex: 0 0 125px;
+    width: 80px;
+    height: 1px;
+    background: #d0d0d0;
+    margin-top: -13px;
+  }
+
+  &-icon {
+    margin: 0 15px;
+  }
+}

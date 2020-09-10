@@ -1,0 +1,184 @@
+.plans {
+  @include size(100%, auto);
+  background-color: $color-background-main;
+}
+.plans-title {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+  @include laptop {
+    margin-bottom: 56px;
+    margin-top: 108px;
+  }
+
+  &__value {
+    font-family: $font-monts;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: -15px;
+    color: $color-black;
+  }
+  &__mission {
+    font-family: $font-sans;
+    margin-top: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: $color-grey;
+  }
+}
+
+.free-trial-offer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.plan-title {
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 1.4px;
+  font-weight: 600;
+  color: $color-black;
+  margin-left: 6px;
+}
+.plan-title--font {
+  font-family: $font-sans;
+  font-style: italic;
+  font-weight: lighter;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+.plans-flex-container {
+  display: flex;
+  @include size(80%, auto);
+  margin: 20px auto 25px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1180px;
+
+  @include laptop-pro {
+    margin: 77px auto 85px;
+    margin-top: 77px;
+    flex-wrap: nowrap;
+  }
+}
+.plans_plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include size(100%, auto);
+  border: 1px solid transparentize($color-grey, 0.8);
+  position: relative;
+  background-color: inherit;
+  transition: 0.2s;
+  margin: 7px auto;
+
+  @include laptop {
+    @include size(50%, auto);
+    padding-left: 2px;
+  }
+
+  @include laptop-pro {
+    @include size(23%, auto);
+    margin: 0px auto;
+  }
+
+  &:hover {
+    background-color: $color-background-main;
+    transform: translateY(-20px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.price-title {
+  text-transform: uppercase;
+  border-bottom: 1px solid transparentize($color-grey, 0.8);
+  width: 100%;
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  font-family: $font-monts;
+  font-weight: bold;
+  font-size: 14px;
+  color: $color-black;
+}
+
+.plans-atribute {
+  color: $color-grey;
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: bold;
+
+  @include laptop-pro {
+    margin-top: 34px;
+    letter-spacing: 1.2px;
+  }
+}
+
+.plans-atribute--color {
+  color: $color-gold;
+  position: absolute;
+  right: 40px;
+}
+
+.price {
+  display: inline-block;
+  margin: 20px auto 30px;
+  font-size: 50px;
+  color: $color-black;
+  font-weight: 600;
+  @include laptop-pro {
+    margin: 50px auto 70px;
+  }
+}
+
+.monthly {
+  font-size: 14px;
+  font-weight: lighter;
+  font-style: italic;
+  font-family: $font-sans;
+}
+
+.plans-btn {
+  position: absolute;
+  bottom: -5%;
+  padding: 4% 10%;
+  border: 1px solid $color-hover;
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0;
+  font-weight: bold;
+  transition: 0.2s;
+  color: $color-black;
+
+  &:hover {
+    opacity: 1;
+    z-index: 999;
+    background-color: $color-background-main;
+    cursor: pointer;
+  }
+}
+
+.plans-atribute--color {
+  color: $color-gold;
+}
+
+.dolar {
+  font-size: 18px;
+  position: absolute;
+  top: 240px;
+  left: 45px;
+  @include laptop-pro {
+    top: 410px;
+    left: 10px;
+  }
+  @include desktop {
+    top: 410px;
+    left: 53px;
+  }
+}

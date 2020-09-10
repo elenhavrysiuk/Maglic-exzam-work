@@ -1,0 +1,168 @@
+.services-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px 15px;
+
+  @include laptop {
+    padding: 0;
+  }
+}
+.services {
+  background-image: url("./assets/images/background/road.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+  color: $color-black;
+  @include laptop {
+    padding-top: 3%;
+  }
+
+&__title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 60px;
+
+  @include laptop {
+    letter-spacing: 2.5px;
+    margin-left: -12%;
+  }
+}
+
+&__text {
+  max-width: 670px;
+  margin-top: 9px;
+  margin-left: 4.5%;
+  text-align: left;
+}
+
+&__text--size {
+  font-family: $font-sans;
+  font-size: 16px;
+  font-weight: 300;
+  color: #6f6f6f;
+  @include laptop {
+    line-height: 31px;
+  }
+}
+.services__link {
+  text-align: center;
+    margin-top: -18px;
+   @include laptop {
+     margin-left: 20%;
+   }
+   @include laptop-pro {
+    margin-left: 35%;
+   }
+}
+}
+.services-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 11%;
+  margin-bottom: 5.5%;
+  margin-top: 4%;
+  @include laptop-pro {
+    margin-top: 0;
+    margin-bottom: 3%;
+  }
+
+  @include desktop {
+    margin-left: 3.6%;
+    margin-bottom: 12.5%;
+    margin-top: 4%;
+  }
+}
+
+.foto {
+  @include laptop-pro {
+    margin-right: -2%;
+  }
+}
+
+.art {
+  @include laptop-pro {
+    margin-right: 12%;
+  }
+}
+
+.icon-services {
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  margin-bottom: 5px;
+
+  @include laptop {
+    width: unset;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    & .far,
+    & .fas {
+      border: 2px solid $color-gold;
+    }
+
+    & .name {
+      transform: scale(1.1, 1.1);
+    }
+  }
+
+  & .far,
+  & .fas {
+    font-size: 28px;
+    border: 2px solid #d8d8d8;
+    border-radius: 50%;
+    padding: 20px;
+  }
+
+  & .name {
+    padding: 23px 6px 0 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    word-spacing: 5px;
+
+    @include laptop-pro {
+      margin-right: -64px;
+    }
+  }
+}
+.services__btn {
+  font-weight: 400;
+  line-height: 25px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 81%;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid $color-white;
+  text-transform: uppercase;
+  color:$color-white;
+  font-size: 18px;
+  border: 2px solid color-grey;
+  text-shadow: 1px 1px 2px $color-grey;
+  margin-left: 10%;
+  @include laptop {
+    width: 52%; 
+  }
+  @include laptop-pro { 
+    margin: 0 0 25px 320px;
+    width: 215px;
+    color:$color-white;
+    text-shadow: none;
+    margin-left: 15px;
+}
+}
+.services__btn:hover {
+  border: 2px solid $color-gold;
+  transform: translateX(10px);
+}
+
+
+

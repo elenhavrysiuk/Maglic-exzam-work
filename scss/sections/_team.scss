@@ -1,0 +1,176 @@
+/*========TEAM=========*/
+
+.team {
+  padding: 20px 15px 30px;
+  @include laptop-pro {
+    padding-top: 100px;
+    padding: 137px 16px 140px;
+  }
+}
+
+.team-title {
+  text-align: center;
+  margin-bottom: 30px;
+  @include laptop-pro {
+    margin-bottom: 85px;
+    @include desktop {
+      margin-bottom: 75px;
+    }
+  }
+  &__value {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: $color-black;
+  }
+  &__mission {
+    font-family: $font-sans;
+    margin-top: 9px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: $color-grey;
+  }
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-membres {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.employee {
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+  @include laptop {
+    width: 55%;
+    margin: 5px auto;
+  }
+  @include laptop-pro {
+    height: 423px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 33.33333%;
+  }
+
+  &__information {
+    position: absolute;
+    bottom: 0;
+    padding: 16px 0 1px 19px;
+    border-top: 1px solid $color-background-main;
+    width: calc(100% - 30px);
+  }
+
+  &__first-name {
+    font-family: $font-monts;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: $color-white;
+  }
+
+  &__profession {
+    font-family: $font-sans;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: $color-white;
+  }
+
+  &__avatar {
+    overflow: hidden;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+  }
+}
+
+.team-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  &__services {
+    margin-top: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+    @include laptop-pro {
+      margin-top: 45px;
+      flex: 0 0 66.666667%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__text-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: $color-black;
+    text-align: center;
+    @include laptop-pro {
+      text-align: unset;
+    }
+  }
+
+  &__text-description {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-grey;
+    font-weight: 500;
+    width: 100%;
+    @include laptop-pro {
+      margin-top: 31px;
+      line-height: 30px;
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+    text-align: center;
+    flex: 0 0 100%;
+    @include laptop-pro {
+      margin-top: 83px;
+
+      flex: unset;
+    }
+    @include desktop {
+      margin-left: 10%;
+    }
+  }
+  .button {
+    font-family: $font-monts;
+    padding: 15px 53px;
+    border: 1px solid rgba(20, 20, 20, 0.8);
+    align-items: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 5px;
+    background: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    @include laptop {
+      padding: 15px 85px;
+    }
+    @include laptop-pro {
+      padding: 24px 54px;
+    }
+
+    &:hover {
+      box-shadow: 3px 3px 3px rgba(33, 33, 33, 0.6);
+      border: 2px solid $color-gold;
+    }
+  }
+}

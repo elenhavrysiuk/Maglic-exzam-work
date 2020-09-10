@@ -1,0 +1,207 @@
+.features-wrapper {
+  width: 95%;
+  background-color: #ffffff00;
+
+  max-width: 1170px;
+  margin: 0 auto;
+  @include laptop-pro {
+    min-width: 1024px;
+  }
+}
+
+.features {
+  padding: 15px 15px;
+  @include laptop-pro {
+    padding: 43px 15px 95px;
+  }
+  @include desktop {
+    padding: 43px 0 95px;
+  }
+
+
+&__title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  position: relative;
+  margin-bottom: 0.6%;
+}
+
+&__subtitle {
+  font-family: $font-sans;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #8c8c8c;
+}
+
+&__intro {
+  background-image: url("../assets/images/background/phone.jpg");
+  background-repeat: no-repeat;
+  background-position: right 0 top 50%;
+  margin-bottom: 46px;
+  @include laptop {
+    background-size: 30%;
+    background-position: right 10% top 50%;
+  }
+  @include desktop {
+    background-size: unset;
+    background-position: right 0 top 50%;
+  }
+}
+
+&__descr {
+  padding-top: 10px;
+  width: 100%;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  @include laptop {
+    width: 70%;
+  }
+  @include laptop-pro {
+    padding-top: 80px;
+    width: 70%;
+  }
+  @include desktop {
+    padding-top: 135px;
+    width: 50%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+&__descr-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 15px;
+  margin-right: 15px;
+  line-height: 25px;
+  @include laptop-pro {
+    line-height: 60px;
+    letter-spacing: 2.2px;
+    margin-top: -1%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+&__descr-text {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #8c8c8c;
+  margin-bottom: 28px;
+  margin-left: 15px;
+  margin-right: 15px;
+  @include laptop {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+&__descr-author {
+  font-family: $font-sans;
+  font-size: 10px;
+  line-height: 65px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    @include size (70px, 1px);
+    background: #000000;
+  }
+}
+
+&__items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 15px;
+  @include desktop {
+    padding: 0;
+  }
+}
+
+&__item {
+  vertical-align: top;
+  padding: 10px 10px 10px 45px;
+  box-sizing: border-box;
+  position: relative;
+  @include laptop-pro {
+    width: 32%;
+    padding: 27px 5px 29px 100px;
+    margin-bottom: 10px;
+  }
+
+  &:nth-child(-n + 3) {
+    border-bottom: 1px solid #ededed;
+  }
+
+  &::before {
+    @include pseudo ($display: block, $pos: absolute, $content: '');
+    @include size (37px, 37px);
+    background-image: url(./assets/images/icons/sprite_icons.png);
+    background-repeat: no-repeat;
+    left: 7px;
+    top: 32px;
+    @include desktop {
+      left: 20px;
+    }
+  }
+
+  &--trend::before {
+    background-position: -60px -394px;
+  }
+
+  &--smart::before {
+    background-position: -60px -551px;
+  }
+
+  &--admin::before {
+    background-position: -60px -708px;
+  }
+
+  &--sleep::before {
+    background-position: -60px -858px;
+  }
+
+  &--user::before {
+    background-position: -60px -1010px;
+  }
+
+  &--backup::before {
+    background-position: -60px -1162px;
+  }
+}
+
+&__item-title {
+  font-family: $font-monts;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+&__item-text {
+  font-family: $font-monts;
+  font-size: 13px;
+
+  font-weight: 400;
+  color: #8c8c8c;
+  @include laptop-pro {
+    line-height: 24px;
+  }
+}
+}

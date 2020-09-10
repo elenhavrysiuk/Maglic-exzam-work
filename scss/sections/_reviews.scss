@@ -1,0 +1,153 @@
+.reviews-container {
+  position: relative;
+  padding-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  @include laptop-pro {
+    padding-bottom: 92px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("./assets/images/background/6.1.jpg");
+    @include backGround;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__title {
+    padding-top: 50px;
+    text-align: center;
+    color: $color-white;
+
+    @include laptop-pro {
+      padding-top: 100px;
+    }
+  }
+
+  &__value {
+    font-family: $font-monts;
+    margin-bottom: 16px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: 18px;
+  }
+
+  &__template-hummer {
+    display: inline-block;
+    margin-right: 14px;
+  }
+
+  &__mission {
+    font-family: $font-sans;
+    margin-top: 13px;
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+}
+
+.reviews-container-info {
+  width: 100%;
+  text-align: center;
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+
+.reviews-container-info-title {
+  font-family: $font-monts;
+  margin: 0;
+  padding-top: 15px;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+}
+
+.reviews-container-info-subtitle {
+  font-family: $font-sans;
+  margin: 0;
+  padding-top: 15px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+
+.reviews-footer {
+  padding: 0 16px;
+  width: 100%;
+  background: $color-grey;
+
+  &-container {
+    flex-wrap: wrap;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px 0;
+    @include laptop-pro {
+      flex-wrap: nowrap;
+      text-align: unset;
+    }
+
+    &-title {
+      font-family: $font-sans;
+      margin-right: 10px;
+      padding-bottom: 5px;
+      color: $color-white;
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 300;
+      margin-left: 10px;
+      @include laptop {
+        font-size: 24px;
+        margin-bottom: unset;
+      }
+
+      & span a {
+        color: $color-gold;
+      }
+    }
+
+    &-button {
+      @include laptop {
+        text-align: center;
+        width: 100%;
+
+        @include laptop-pro {
+          width: unset;
+        }
+      }
+      & button {
+        font-family: $font-monts;
+        padding: 9px 82px;
+        color: $color-white;
+        background: none;
+        border: 1px solid $color-white;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1.7px;
+        transition: 0.3s;
+        transition: box-shadow 0.3s;
+        @include laptop {
+          padding: 15px 109px;
+        }
+        @include laptop-pro {
+          padding: 17px 35px;
+        }
+
+        &:hover {
+          border-color: $color-gold;
+          box-shadow: 3px 3px 3px rgba(33, 33, 33, 0.6);
+        }
+      }
+    }
+  }
+}

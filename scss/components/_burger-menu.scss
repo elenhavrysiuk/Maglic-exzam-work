@@ -1,0 +1,114 @@
+/* / burger menu */
+
+
+.menu-icon {
+  z-index: 19;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(243, 239, 231, 0.2);
+  width: 40px;
+  height: 40px;
+  margin-left: 80%;
+  cursor: pointer;
+
+  @include laptop-pro {
+   display: none;
+  }  
+}
+    
+.menu-icon-line {
+  width: 30px;
+  height: 5px;
+  background: $color-white;
+  position: relative;
+}
+    
+.menu-icon-line::before {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  content: "";
+  width: 30px;
+  height: 5px;
+  background-color: $color-white;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+} 
+    
+.menu-icon-line::after {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  content: "";
+  width: 30px;
+  height: 5px;
+  background-color: $color-white;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+} 
+    
+.menu-icon.menu-icone-active .menu-icon-line {
+  background-color: transparent;
+}
+    
+.menu-icon.menu-icone-active .menu-icon-line::before {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}  
+    
+.menu-icon.menu-icone-active .menu-icon-line::after {
+  top: 0;
+  transform: rotate(-45deg);
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+    /* // mobil nav */
+
+.mobile-nav {
+  z-index: 9;
+  display: block;
+  position: absolute;
+  right: -320px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  width: 320px;
+  padding: 15px;
+  background-color: $color-mob-menu-icon;
+  transition: transfom 0.4s ease-in;
+
+  @include tablet {
+   padding: 50px;
+   width: 360px;
+   right: -360px;
+  } 
+  
+
+&--active {
+  transform: translateX(-100%);
+}   
+
+&__list {
+  list-style-type: none;  
+  margin: 25px 0;
+  padding: 0;
+  text-align: initial;
+}
+        
+&__item {
+  margin-bottom: 20px;
+}
+    
+&__link {
+  color: $color-white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 22px;
+}
+        
+&__link:hover,
+&__link:focus {
+  color: $color-gold;
+} 
+}   

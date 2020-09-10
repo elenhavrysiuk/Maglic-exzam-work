@@ -1,0 +1,270 @@
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+  @include laptop-pro {
+    margin-bottom: 80px;
+  }
+
+  &__value {
+    font-family: $font-monts;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: $color-black;
+  }
+  &__mission {
+    font-family: $font-sans;
+    margin-top: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: $color-grey;
+  }
+}
+
+.form-container {
+  .form-row-bg {
+    width: 100%;
+    background: #1c1c1c;
+  }
+  .form-container-bg {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0px 20px;
+    @include laptop-pro {
+      padding: 100px 0px 90px;
+      @include desktop {
+        padding: 93px 0px 86px;
+      }
+    }
+  }
+
+  &-icons {
+    margin-bottom: 95px;
+
+    & .icon {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-left: 3%;
+
+      &:hover {
+        & .icon-container {
+          border-color: $color-gold;
+        }
+      }
+
+      &-container {
+        @include flex-center;
+        @include size(95px, 95px);
+        flex: 0 0 95px;
+        border: 1px solid grey;
+        border-radius: 50%;
+        transition: 0.3s;
+
+        & .far,
+        & .fas {
+          font-size: 32px;
+          color: $color-gold;
+        }
+        & .fa-map-marker-alt {
+          font-size: 40px;
+        }
+        .fa-envelope {
+          font-size: 50px;
+        }
+      }
+
+      &-detail {
+        font-family: $font-sans;
+        padding-left: 35px;
+        font-size: 16px;
+        text-transform: capitalize;
+        word-spacing: 4px;
+        color: $color-white;
+        word-break: break-all;
+        font-style: italic;
+        padding-bottom: 6px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  &-form {
+    & .input-group {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-align: stretch;
+      align-items: stretch;
+      width: 100%;
+      &-text {
+        font-family: $font-sans;
+        padding-left: 0;
+        background: none;
+        color: $color-white;
+        border: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-style: italic;
+        margin-left: 2px;
+
+        & span {
+          margin-right: 5px;
+          font-size: 16px;
+          color: $color-gold;
+        }
+      }
+
+      & .form-control {
+        background: none;
+        border: none;
+        color: $color-white;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    & .form-textarea-content {
+      color: $color-white;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-style: italic;
+      margin-left: 2px;
+      font-family: $font-sans;
+      padding-bottom: 30px;
+      padding-left: 10px;
+      @include laptop-pro {
+        padding-bottom: 78px;
+        padding-left: 0;
+      }
+    }
+
+    & textarea {
+      background: none;
+      border-right: none;
+      border-top: none;
+      border-left: none;
+      border-radius: 0;
+      border-bottom: 1px solid grey;
+      width: 100%;
+
+      &:focus {
+        background: none;
+        color: $color-white;
+        border-color: $color-gold;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    & .form-content-container {
+      margin: 20px 5px 20px;
+      @include laptop-pro {
+        margin: 55px 0 45px;
+      }
+    }
+
+    & .form-item {
+      flex: 0 0 100%;
+      max-width: 95%;
+      padding-left: 10px;
+      @include laptop-pro {
+        padding: 0 15px;
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+      }
+
+      &:first-child {
+        padding-left: 10px;
+        @include laptop-pro {
+          padding-left: 0;
+        }
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      & .form-control {
+        border-bottom: 1px solid grey;
+        border-radius: 0;
+      }
+
+      & .form-control:focus {
+        box-shadow: none;
+      }
+    }
+
+    & .contact-form-submit {
+      margin-left: 12%;
+      @include laptop {
+        margin-left: 0;
+        text-align: center;
+      }
+      @include desktop {
+        text-align: right;
+        margin-left: 12%;
+      }
+
+      &-btn {
+        font-family: "Montserrat", sans-serif;
+        padding: 17px 70px;
+        background: none;
+        border: 1px solid $color-white;
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 14px;
+        transition: 0.3s;
+        letter-spacing: 5.6px;
+        transition: box-shadow 0.3s ease 0s;
+        @include laptop {
+          padding: 15px 107px;
+        }
+        @include laptop-pro {
+          padding: 15px 32px;
+        }
+
+        &:hover {
+          border-color: $color-gold;
+          box-shadow: rgba(33, 33, 33, 0.6) 3px 3px 3px;
+        }
+      }
+    }
+  }
+}
+
+.row-form {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include laptop-pro {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.icon-information {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 5px auto;
+
+  @include laptop-pro {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+textarea {
+  resize: none;
+}
